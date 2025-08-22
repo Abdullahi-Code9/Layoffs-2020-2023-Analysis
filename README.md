@@ -29,6 +29,7 @@ The project is divided into two phases:
 
 ## 📈 Phase 2: Exploratory Data Analysis (EDA)
 ##  Steps in EDA
+
 1. **Date Range of Dataset**
 
 SELECT MIN(`date`), MAX(`date`)
@@ -36,6 +37,7 @@ SELECT MIN(`date`), MAX(`date`)
 FROM layoffs_staging2;
 
 **✅ Shows earliest and latest layoffs in the dataset.**
+
 
 2. **Companies with 100% Layoffs**
 
@@ -48,6 +50,7 @@ WHERE percentage_laid_off = 1
 ORDER BY funds_raised_millions DESC;
 
 **✅ Identifies companies that shut down completely.**
+
 
 3. **Top Companies by Total Layoffs**
 
@@ -63,6 +66,7 @@ ORDER BY total_layoffs DESC;
 
 4. **Layoffs by Industry**
 
+
 SELECT industry, SUM(total_laid_off)
 
 FROM layoffs_staging2
@@ -72,6 +76,7 @@ GROUP BY industry
 ORDER BY 2 DESC;
 
 **✅ Tech-related industries, especially Consumer and Crypto, were hit hardest.**
+
 
 5. **Layoffs by Country**
 
@@ -85,7 +90,8 @@ ORDER BY 2 DESC;
 
 **✅ The United States had the majority of layoffs.**
 
-7. **Layoffs Over Time (Monthly + Rolling Total)**
+
+6. **Layoffs Over Time (Monthly + Rolling Total)**
 
 WITH Rolling_Total AS 
 
@@ -107,7 +113,8 @@ FROM Rolling_Total;
 
 **✅ Shows cumulative layoffs month by month.**
 
-9. **Top 5 Companies per Year (Ranked)**
+
+7. **Top 5 Companies per Year (Ranked)**
 
 WITH Company_Year (company, years, total_laid_off) AS
 
@@ -160,6 +167,7 @@ WHERE Ranking <= 5;
 1. Clone this repo  
    ```bash
    git clone https://github.com/<your-username>/sql-data-cleaning-layoffs-2022.git
+
 
 
 
