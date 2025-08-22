@@ -32,20 +32,23 @@ The project is divided into two phases:
 1. **Date Range of Dataset**
 SELECT MIN(`date`), MAX(`date`)
 FROM layoffs_staging2;
+
 **✅ Shows earliest and latest layoffs in the dataset.**
 
-2. **Companies with 100% Layoffs**
+3. **Companies with 100% Layoffs**
 SELECT *
 FROM layoffs_staging2
 WHERE percentage_laid_off = 1
 ORDER BY funds_raised_millions DESC;
+
 **✅ Identifies companies that shut down completely.**
 
-3. **Top Companies by Total Layoffs**
+5. **Top Companies by Total Layoffs**
 SELECT company, SUM(total_laid_off) AS total_layoffs
 FROM layoffs_staging2
 GROUP BY company
 ORDER BY total_layoffs DESC;
+
 **✅ Meta, Amazon, and Google reported the highest layoffs.**
 
 4.**Layoffs by Industry**
@@ -53,6 +56,7 @@ SELECT industry, SUM(total_laid_off)
 FROM layoffs_staging2
 GROUP BY industry
 ORDER BY 2 DESC;
+
 **✅ Tech-related industries, especially Consumer and Crypto, were hit hardest.**
 
 5. **Layoffs by Country**
@@ -60,9 +64,10 @@ SELECT country, SUM(total_laid_off)
 FROM layoffs_staging2
 GROUP BY country
 ORDER BY 2 DESC;
+
 **✅ The United States had the majority of layoffs.**
 
-6. **Layoffs Over Time (Monthly + Rolling Total)**
+7. **Layoffs Over Time (Monthly + Rolling Total)**
 WITH Rolling_Total AS 
 (
   SELECT SUBSTRING(`date`, 1, 7) AS `month`, SUM(total_laid_off) AS total_off
@@ -72,9 +77,10 @@ WITH Rolling_Total AS
 SELECT `month`, total_off,
        SUM(total_off) OVER(ORDER BY `month`) AS Rolling_Total
 FROM Rolling_Total;
+
 **✅ Shows cumulative layoffs month by month.**
 
-7. **Top 5 Companies per Year (Ranked)**
+9. **Top 5 Companies per Year (Ranked)**
 WITH Company_Year (company, years, total_laid_off) AS
 (
   SELECT company, YEAR(`date`), SUM(total_laid_off)
@@ -89,6 +95,7 @@ WITH Company_Year (company, years, total_laid_off) AS
 SELECT *
 FROM Company_Year_Rank
 WHERE Ranking <= 5;
+
 **✅ Lists the top 5 companies with the most layoffs each year.**
 
 **🔑 Key Insights**
