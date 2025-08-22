@@ -37,7 +37,7 @@ FROM layoffs_staging2;
 
 **✅ Shows earliest and latest layoffs in the dataset.**
 
-3. **Companies with 100% Layoffs**
+2. **Companies with 100% Layoffs**
 
 SELECT *
 
@@ -49,7 +49,7 @@ ORDER BY funds_raised_millions DESC;
 
 **✅ Identifies companies that shut down completely.**
 
-5. **Top Companies by Total Layoffs**
+3. **Top Companies by Total Layoffs**
 
 SELECT company, SUM(total_laid_off) AS total_layoffs
 
@@ -61,7 +61,7 @@ ORDER BY total_layoffs DESC;
 
 **✅ Meta, Amazon, and Google reported the highest layoffs.**
 
-4.**Layoffs by Industry**
+4. **Layoffs by Industry**
 
 SELECT industry, SUM(total_laid_off)
 
@@ -101,7 +101,7 @@ WITH Rolling_Total AS
 
 SELECT `month`, total_off,
 
-       SUM(total_off) OVER(ORDER BY `month`) AS Rolling_Total
+SUM(total_off) OVER(ORDER BY `month`) AS Rolling_Total
        
 FROM Rolling_Total;
 
