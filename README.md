@@ -14,7 +14,7 @@ The main goal was to apply **SQL-based data cleaning techniques** to ensure data
    - Fixed inconsistent country names (e.g., "United States." → "United States").  
    - Converted `date` column from text to proper `DATE` format.  
 
-3. ** Handle Null / Missing Values**  
+3. **Handle Null / Missing Values**  
    - Replaced blank industries with `NULL`.  
    - Used self-joins to fill in missing industry values based on the same company.  
    - Removed rows where both `total_laid_off` and `percentage_laid_off` were missing.  
