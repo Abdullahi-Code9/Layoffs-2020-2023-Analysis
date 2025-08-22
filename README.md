@@ -36,9 +36,13 @@ FROM layoffs_staging2;
 **✅ Shows earliest and latest layoffs in the dataset.**
 
 3. **Companies with 100% Layoffs**
+
 SELECT *
+
 FROM layoffs_staging2
+
 WHERE percentage_laid_off = 1
+
 ORDER BY funds_raised_millions DESC;
 
 **✅ Identifies companies that shut down completely.**
@@ -119,4 +123,5 @@ WHERE Ranking <= 5;
 1. Clone this repo  
    ```bash
    git clone https://github.com/<your-username>/sql-data-cleaning-layoffs-2022.git
+
 
