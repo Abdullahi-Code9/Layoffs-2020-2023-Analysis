@@ -126,7 +126,8 @@ WHERE Ranking <= 5;
 ## How to Reproduce
 1. Clone this repo  
    ```bash
-   git clone https://github.com/<your-username>/sql-data-cleaning-layoffs-2022.git
+   git clone https://github.com/Abdullahi-Code9/sql-data-cleaning-layoffs-2022.git
+
 
 
 
