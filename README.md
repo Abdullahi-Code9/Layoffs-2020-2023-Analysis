@@ -1,13 +1,13 @@
 # SQL Data Cleaning & Exploratory Data Analysis (EDA) - Layoffs 2022 Dataset
 
-## 📌 Project Overview
+##  Project Overview
 This project focuses on **cleaning and analyzing the 2022 Layoffs dataset** from Kaggle using SQL.  
 The dataset contains global layoff records from companies across multiple industries.  
 The project is divided into two phases:
 1. **Data Cleaning** – Making the dataset accurate, consistent, and analysis-ready.  
 2. **Exploratory Data Analysis (EDA)** – Uncovering trends and insights from the cleaned data.
 
-## 🛠️ Phase 1: Data Cleaning
+##  Phase 1: Data Cleaning
 ##  Steps in Data Cleaning
 1. **Remove Duplicates**  
    - Used `ROW_NUMBER()` to detect and delete duplicates.  
@@ -27,7 +27,7 @@ The project is divided into two phases:
    - Dropped helper column `row_num`.  
    - Stored the clean data in a staging table `layoffs_staging2`.
 
-## 📈 Phase 2: Exploratory Data Analysis (EDA)
+##  Phase 2: Exploratory Data Analysis (EDA)
 ##  Steps in EDA
 1. **Date Range of Dataset**
 ```sql
@@ -127,6 +127,7 @@ WHERE Ranking <= 5;
 1. Clone this repo  
    ```bash
    git clone https://github.com/Abdullahi-Code9/sql-data-cleaning-layoffs-2022.git
+
 
 
 
