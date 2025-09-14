@@ -52,7 +52,7 @@ FROM layoffs_staging2
 GROUP BY company
 ORDER BY total_layoffs DESC;
 ```
-**✅ Meta, Amazon, and Google reported the highest layoffs.**
+**✅ Amazon, Google, and Meta reported the highest layoffs.**
 
 4. **Layoffs by Industry**
 
@@ -62,7 +62,7 @@ FROM layoffs_staging2
 GROUP BY industry
 ORDER BY 2 DESC;
 ```
-**✅ Tech-related industries, especially Consumer and Crypto, were hit hardest.**
+**✅ TWhile layoffs occurred across many sectors, tech-related industries — including Hardware, Crypto, Security, and Infrastructure — experienced the highest combined job losses.**
 
 5. **Layoffs by Country**
 ```sql
@@ -127,6 +127,7 @@ WHERE Ranking <= 5;
 1. Clone this repo  
    ```bash
    git clone https://github.com/Abdullahi-Code9/sql-data-cleaning-layoffs-2022.git
+
 
 
 
