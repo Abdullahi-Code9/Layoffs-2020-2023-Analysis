@@ -106,17 +106,17 @@ WHERE Ranking <= 5;
 ```
 **✅ Lists the top 5 companies with the most layoffs each year.**
 
-**🔑 Key Insights**
+8. **Key Insights**
 
-📅 Layoffs spanned from 2020 to 2023.
+- Layoffs spanned from 2020 to 2023.
 
-🏢 Meta, Amazon, and Google were among the companies with the largest layoffs.
+- Meta, Amazon, and Google were among the companies with the largest layoffs.
 
-🌍 The United States accounted for most layoffs.
+- The United States accounted for most layoffs.
 
-💻 The Tech industry faced the biggest cuts.
+- The Tech industry faced the biggest cuts.
 
-📈 Layoffs increased significantly in late 2022.
+- Layoffs increased significantly in late 2022.
 
 ## Dataset
 - Source: [Kaggle - Layoffs 2022](https://www.kaggle.com/datasets/swaptr/layoffs-2022)  
@@ -127,6 +127,7 @@ WHERE Ranking <= 5;
 1. Clone this repo  
    ```bash
    git clone https://github.com/Abdullahi-Code9/sql-data-cleaning-layoffs-2022.git
+
 
 
 
